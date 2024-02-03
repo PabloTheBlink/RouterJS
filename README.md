@@ -16,7 +16,7 @@ Router.render(
       template: "<h1>Hola</h1>",
     },
     {
-      path: "/2",
+      path: "/:id",
       template: "<h1>Adios</h1>",
     },
   ],
@@ -25,5 +25,8 @@ Router.render(
 
 // Navegar entre rutas
 
-Router.navigate("/2");
+Router.navigate("/1");
+
+// Recibir parámetros
+setTimeout(() => console.log(Router.params.id));
 ```
